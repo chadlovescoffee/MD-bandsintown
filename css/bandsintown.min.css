@@ -1,0 +1,130 @@
+.column_wrapper {
+  position: relative;
+  overflow: visible; }
+  .column_wrapper:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both; }
+
+.bandsintown_pkg {
+  display: block !important; }
+  .bandsintown_pkg .headings {
+    padding-bottom: 0 !important; }
+    .bandsintown_pkg .headings .city {
+      display: none; }
+      @media (min-width: 993px) and (min-height: 0px) {
+        .bandsintown_pkg .headings .city {
+          display: block; } }
+    .bandsintown_pkg .headings .venue {
+      display: none; }
+      @media (min-width: 993px) and (min-height: 0px) {
+        .bandsintown_pkg .headings .venue {
+          display: block; } }
+    @media (min-width: 993px) and (min-height: 0px) {
+      .bandsintown_pkg .headings .description {
+        display: block; } }
+    .bandsintown_pkg .headings .tickets {
+      display: none; }
+      @media (min-width: 601px) and (min-height: 0px) {
+        .bandsintown_pkg .headings .tickets {
+          display: block;
+          padding-right: 70px; } }
+  .bandsintown_pkg .event {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
+    .bandsintown_pkg .event .date {
+      padding-left: 10px;
+      padding-right: 10px;
+      float: left;
+      width: 30%;
+      position: relative; }
+      @media (min-width: 601px) and (min-height: 0px) {
+        .bandsintown_pkg .event .date {
+          float: left;
+          width: 20%;
+          position: relative; } }
+      @media (min-width: 993px) and (min-height: 0px) {
+        .bandsintown_pkg .event .date {
+          float: left;
+          width: 15%;
+          position: relative; } }
+      .bandsintown_pkg .event .date .month_day {
+        display: block; }
+        @media (min-width: 993px) and (min-height: 0px) {
+          .bandsintown_pkg .event .date .month_day {
+            display: inline-block; }
+            .bandsintown_pkg .event .date .month_day:after {
+              content: ',';
+              padding-right: 4px; } }
+    .bandsintown_pkg .event .main_container {
+      padding-right: 10px;
+      float: left;
+      width: 70%;
+      position: relative; }
+      @media (min-width: 601px) and (min-height: 0px) {
+        .bandsintown_pkg .event .main_container {
+          float: left;
+          width: 80%;
+          position: relative; } }
+      @media (min-width: 993px) and (min-height: 0px) {
+        .bandsintown_pkg .event .main_container {
+          float: left;
+          width: 85%;
+          position: relative; } }
+      @media (min-width: 601px) and (min-height: 0px) {
+        .bandsintown_pkg .event .main_container .details_container {
+          float: left;
+          width: 70%;
+          position: relative; } }
+      @media (min-width: 993px) and (min-height: 0px) {
+        .bandsintown_pkg .event .main_container .details_container {
+          float: left;
+          width: 80%;
+          position: relative; } }
+      .bandsintown_pkg .event .main_container .details_container .city {
+        font-weight: 800; }
+        @media (min-width: 993px) and (min-height: 0px) {
+          .bandsintown_pkg .event .main_container .details_container .city {
+            float: left;
+            width: 30%;
+            position: relative;
+            font-weight: 400; } }
+      .bandsintown_pkg .event .main_container .details_container .venue {
+        margin-bottom: 10px; }
+        @media (min-width: 993px) and (min-height: 0px) {
+          .bandsintown_pkg .event .main_container .details_container .venue {
+            float: left;
+            width: 40%;
+            position: relative;
+            margin-bottom: 0px; } }
+      .bandsintown_pkg .event .main_container .details_container .description {
+        margin-bottom: 10px; }
+        @media (min-width: 993px) and (min-height: 0px) {
+          .bandsintown_pkg .event .main_container .details_container .description {
+            float: left;
+            width: 30%;
+            position: relative;
+            margin-bottom: 0px; } }
+        .bandsintown_pkg .event .main_container .details_container .description.small {
+          font-size: 12px; }
+      @media (min-width: 601px) and (min-height: 0px) {
+        .bandsintown_pkg .event .main_container .tickets {
+          float: left;
+          width: 30%;
+          position: relative;
+          text-align: right; } }
+  @media (min-width: 601px) and (min-height: 0px) and (min-width: 993px) and (min-height: 0px) {
+    .bandsintown_pkg .event .main_container .tickets {
+      float: left;
+      width: 20%;
+      position: relative; } }
+
+  .bandsintown_pkg .hide {
+    display: none; }
+  .bandsintown_pkg .view_more {
+    margin: auto;
+    display: block;
+    margin-top: 40px; }

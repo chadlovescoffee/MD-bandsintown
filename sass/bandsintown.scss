@@ -1,0 +1,187 @@
+
+// Media Query Ranges
+$small: 601px;
+$medium: 993px;
+$large: 1201px;
+
+
+// Media Queries
+@mixin screen($screen_width) {
+  @media (min-width: $screen_width ) and (min-height: 0px) {
+    @content;
+  }
+}
+
+// Column Wrapper
+.column_wrapper {
+  position: relative;
+  overflow: visible;
+
+
+  &:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+}
+
+// Column
+@mixin column ($width) {
+  float: left;
+  width: $width;
+  position: relative;
+}
+
+
+
+// Custom
+.bandsintown_pkg {
+  display: block !important;
+
+  // Headings
+  .headings {
+    padding-bottom: 0 !important;
+
+    .city {
+      display: none;
+      @include screen($medium) {
+        display: block;
+      }
+    }
+
+    .venue {
+      display: none;
+      @include screen($medium) {
+        display: block;
+      }
+    }
+
+    .description {
+      @include screen($medium) {
+        display: block;
+      }
+    }
+
+    .tickets {
+      display: none;
+      @include screen($small) {
+        display: block;
+        padding-right: 70px;
+      }
+    }
+
+
+  }
+
+
+
+
+  // Event
+  .event {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+
+    .date {
+      padding-left: 10px;
+      padding-right: 10px;
+      @include column(30%);
+      @include screen($small) {
+        @include column(20%);
+      }
+      @include screen($medium) {
+        @include column(15%);
+      }
+
+      .month_day {
+        display: block;
+        @include screen($medium) {
+          display: inline-block;
+
+          &:after {
+            content: ',';
+            padding-right: 4px;
+          }
+
+        }
+      }
+    }
+
+    .main_container {
+      padding-right: 10px;
+      @include column(70%);
+      @include screen($small) {
+        @include column(80%);
+      }
+      @include screen($medium) {
+        @include column(85%);
+      }
+
+      .details_container {
+        @include screen($small) {
+          @include column(70%);
+        }
+        @include screen($medium) {
+          @include column(80%);
+        }
+
+        .city {
+          font-weight: 800;
+          @include screen($medium) {
+            @include column(30%);
+            font-weight: 400;
+          }
+        }
+
+        .venue {
+          margin-bottom: 10px;
+          @include screen($medium) {
+            @include column(40%);
+            margin-bottom: 0px;
+          }
+        }
+
+        .description {
+          margin-bottom: 10px;
+          @include screen($medium) {
+            @include column(30%);
+            margin-bottom: 0px;
+          }
+
+          &.small {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .tickets {
+        @include screen($small) {
+          @include column(30%);
+          text-align: right;
+          @include screen($medium) {
+            @include column(20%);
+          }
+        }
+      }
+    }
+
+  }
+
+
+  .hide {
+    display: none;
+  }
+
+  .view_more {
+    margin: auto;
+    display: block;
+    margin-top: 40px;
+
+  }
+
+
+
+}
