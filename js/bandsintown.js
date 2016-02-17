@@ -93,6 +93,8 @@ bandsintown = {
 
           success: function (bit) {
 
+            // console.log(bit);
+
             if(timeframe == 'upcoming') {
               bandsintown_loop(bit);
             } else {
@@ -109,7 +111,8 @@ bandsintown = {
     // Build Loop
     function bandsintown_loop(bit) {
       var i = 0;
-      var html = '';
+      // var html = '';
+      var show_html = '<p class="no_dates center-align">There are currently no tour dates.</p>';
 
       $(bit).each(function () {
 
@@ -154,29 +157,37 @@ bandsintown = {
         }
 
 
-        html +=
-          '<div class="event column_wrapper' + display_class + '">' +
-          '   <div class="date">' + pretty_date + '</div>' +
-          '   <div class="main_container column_wrapper">' +
-          '     <div class="details_container column_wrapper">' +
-          '       <div class="city">' + bit[i].formatted_location + '</div>' +
-          '       <div class="venue">' +  bit[i].venue.name + '</div>' +
-          '       <div class="description small">' +  description + '</div>' +
-          '     </div>' +
-          '     <div class="tickets">' + ticket_html + '</div>' +
-          '   </div>' +
-          '</div>'
-        ;
-        ++i;
+
+        if (bit.length != 0) {
+          show_html +=
+            '<div class="event column_wrapper' + display_class + '">' +
+            '   <div class="date">' + pretty_date + '</div>' +
+            '   <div class="main_container column_wrapper">' +
+            '     <div class="details_container column_wrapper">' +
+            '       <div class="city">' + bit[i].formatted_location + '</div>' +
+            '       <div class="venue">' +  bit[i].venue.name + '</div>' +
+            '       <div class="description small">' +  description + '</div>' +
+            '     </div>' +
+            '     <div class="tickets">' + ticket_html + '</div>' +
+            '   </div>' +
+            '</div>'
+          ;
+          ++i;
+
+
+
+        }
 
       });
 
 
-      $(destination).html('<div class="bandsintown_pkg" style="display: none;">' + heading_html + html + '</div>');
+      $(destination).html('<div class="bandsintown_pkg" style="display: none;">' + heading_html + show_html + '</div>');
 
 
-
-
+      // Hide No Date
+      if (bit.length != 0) {
+        $('.no_dates').css('display', 'none');
+      }
 
       more_button();
     }
