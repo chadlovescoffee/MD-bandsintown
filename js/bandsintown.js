@@ -4,7 +4,7 @@ bandsintown = {
   app: function() {
 
     // Required Js
-    var required_js = '/js/materialize.min.js';
+    var required_js = 'js/materialize.min.js';
 
     // Append Required JS
     if (!$('head script[src="' + required_js + '"]').length > 0) {
@@ -16,8 +16,8 @@ bandsintown = {
     // Required CSS
     var required_css = [
       'http://fonts.googleapis.com/icon?family=Material+Icons',
-      '/css/materialize.min.css',
-      '/css/bandsintown.min.css'
+      'css/materialize.min.css',
+      'css/bandsintown.min.css'
     ];
 
 
