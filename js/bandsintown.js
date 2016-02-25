@@ -225,18 +225,18 @@ bandsintown = {
     function Date_pretty(Date_ugly) {
 
       var Months = [
-        'Jan',
-        'Feb',
-        'Mar',
-        'Apr',
+        'January',
+        'February',
+        'March',
+        'April',
         'May',
-        'Jun',
-        'Jul',
-        'Aug',
-        'Sep',
-        'Oct',
-        'Nov',
-        'Dec'
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
       ];
 
       var Ugly_split = Date_ugly.split('-');
@@ -250,14 +250,16 @@ bandsintown = {
       var d = new Date();
       var Year_current = d.getFullYear();
 
-      var Date_pretty = '';
-      if(Year_ugly > Year_current){
-        Date_pretty = '<span class="month_day">' + Month_pretty + ' '  + Day_ugly + '</span>' +
-        '<span class="year">' + Year_ugly + '</span>';
+      var Date_pretty = '<span class="month_day">' + Month_pretty + ' '  + Day_ugly + '</span>' + '<span class="year">' + Year_ugly + '</span>';
 
-      } else {
-        Date_pretty = '<span class="month_day">' + Month_pretty + ' ' + Day_ugly + '</span>';
-      }
+
+      // if(Year_ugly > Year_current){
+      //   Date_pretty = '<span class="month_day">' + Month_pretty + ' '  + Day_ugly + '</span>' +
+      //   '<span class="year">' + Year_ugly + '</span>';
+      //
+      // } else {
+      //   Date_pretty = '<span class="month_day">' + Month_pretty + ' ' + Day_ugly + '</span>';
+      // }
 
       return Date_pretty;
 
