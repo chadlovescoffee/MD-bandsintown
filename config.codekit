@@ -4,7 +4,7 @@
 "files": {
 	"\/css\/bandsintown.min.css": {
 		"fileType": 16,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/bandsintown.min.css",
 		"outputAbbreviatedPath": "No Output Path",
@@ -34,8 +34,8 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/bandsintown.js",
-		"outputAbbreviatedPath": "\/Users\/chadrichardson\/Desktop\/scott_materialize\/js\/bandsintown.min.js",
-		"outputPathIsOutsideProject": 1,
+		"outputAbbreviatedPath": "\/js\/bandsintown.min.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
@@ -70,8 +70,8 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/sass\/bandsintown.scss",
-		"outputAbbreviatedPath": "\/Users\/chadrichardson\/Desktop\/scott_materialize\/css\/bandsintown.min.css",
-		"outputPathIsOutsideProject": 1,
+		"outputAbbreviatedPath": "\/css\/bandsintown.min.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
